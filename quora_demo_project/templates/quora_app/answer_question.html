@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Answer Question</title>
+</head>
+<body>
+    <h1>Answer the Question</h1>
+    <p>Question: {{ question.text }}</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Answer</button>
+    </form>
+</body>
+</html>

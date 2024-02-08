@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quora</title>
+</head>
+<body>
+    <h1>Welcome to Quora</h1><hr>
+    <h2>Questions:</h2>
+    <ol>
+        {% for question in Question %}
+        <li><a href="{% url 'answer_question' question.id %}">{{question.text}}</a></li>
+        {% endfor %}
+    </ol>
+    <a href="post_question/">POST QUESTION</a>
+</body>
+</html>
